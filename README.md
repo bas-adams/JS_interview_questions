@@ -1,1 +1,1 @@
-# IS_interview_questions
+# JS_interview_questions
