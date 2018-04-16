@@ -1,0 +1,39 @@
+//Take number from 0 to 32 and drow pyramid 
+// e.g n = 5 
+//        # _ _ #
+//      # # _ _ # #
+//    # # # _ _ # # #
+//  # # # # _ _ # # # #
+//# # # # # _ _ # # # # #
+
+const pyramid = () => {
+  let piramidHeigth;
+  let space;
+  let hash = 1;
+  let result = '';
+  
+  do{
+    piramidHeigth = prompt('Please provide number: ');
+  }while( piramidHeigth <= 0 || piramidHeigth >= 32);
+  
+  space = piramidHeigth - 1;
+  
+  for(let i = 0; i < piramidHeigth; i++){
+    for(let j = 0; j < space; j++){
+      result += ' ';
+    }
+    for(let k = 0; k < hash; k++){
+      result += '#';
+    }
+    result += '  ';
+    for(let n = 0; n < hash; n++){
+      result += '#';
+    }
+    console.log(result);
+    result = '';
+    space--;
+    hash++;
+  }
+}
+
+pyramid();
